@@ -1,3 +1,5 @@
+# .lower() makes the input from raw_input lowercase.
+
 nice = 0
 mean = 0
 
@@ -11,7 +13,7 @@ def start():
     print "Welcome, " +name+"!"
     print "In this game, you will be greeted by several different people. You can treat them nicely or you can be mean."
     print "At the end of the game, your fate will be determined depending on how you acted."
-    choice = raw_input("Do you want to play? y/n " )
+    choice = raw_input("Do you want to play? y/n " ).lower()
     if choice == "y":
         print "Great, use 'm' for mean and 'n' for nice!"
         begin()
@@ -24,7 +26,7 @@ def begin():
     
     if nice > 4:
         print "Nice job - you win! Everyone loves you, and you live in a palace!"
-        choice = raw_input("Do you want to play again? y/n  ")
+        choice = raw_input("Do you want to play again? y/n  ").lower()
         if choice == "y":
             print "Ok, let's go!"
             nice = 0
@@ -35,7 +37,7 @@ def begin():
     if mean > 4:
         print "Too bad - game over! You now live in a van down by the river with no friends!"
 		# reset global variables here
-	choice = raw_input("Do you want to play again? y/n  ")
+	choice = raw_input("Do you want to play again? y/n  ").lower()
         if choice == "y":
             print "Ok lets go!"
             mean = 0
@@ -51,11 +53,11 @@ def begin():
                 print "See you later!"
                 exit()
             if choice != "y"+"n":
-                choice = raw_input("Do you want to play again? y/n  ")
+                choice = raw_input("Do you want to play again? y/n  ").lower()
                 
    
                     
-    pick = raw_input("Someone approaches you to talk. Will you be nice or mean? n/m? ") # spell approaches correctly
+    pick = raw_input("Someone approaches you to talk. Will you be nice or mean? n/m? ").lower() # capitalisation of n/m doesn't matter anymore
     if pick == "n":
         print "They smile and walk away."
         nice = nice+1
